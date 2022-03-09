@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="square">
+       
+    </div>
+
+    <script>
+      const square = document.querySelector(".square");
+
+      square.onclick = (e) => {
+        // console.log("X:"+e.clientX)
+        // console.log("Y:"+e.clientY)
+       
+
+        let b = document.createElement("div");
+        b.classList.add("bubble");
+        b.style.left = (e.clientX - square.offsetLeft) + "px";
+        b.style.top = (e.clientY - square.offsetTop)+"px";
+        square.appendChild(b);
+       
+        
+        setTimeout(function(){
+            let bubble = document.querySelector(".bubble");
+            bubble.remove()
+        }, 2000);
+      };
+    </script>
+  </body>
+</html>

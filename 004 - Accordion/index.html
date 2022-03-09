@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Accordion Item #1</h2>
+
+            </div>
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed totam perferendis inventore officia provident odit quia maiores quae id atque!
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Accordion Item #2</h2>
+
+            </div>
+            <div class="accordion-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum repellat doloribus accusamus ipsam unde! Deleniti soluta aperiam maiores consectetur, voluptatem ut veniam aliquam ullam sit, repellendus aliquid in eligendi culpa!
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Accordion Item #3</h2>
+
+            </div>
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda. Sint minus dignissimos soluta asperiores necessitatibus incidunt magnam sunt eos.
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Accordion Item #4</h2>
+
+            </div>
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda. Sint minus dignissimos soluta asperiores necessitatibus incidunt magnam sunt eos.
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Accordion Item #5</h2>
+
+            </div>
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, assumenda. Sint minus dignissimos soluta asperiores necessitatibus incidunt magnam sunt eos.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const accordion_items = document.querySelectorAll('.accordion-item')
+
+        for(let i=0; i < accordion_items.length; i++){
+            accordion_items[i].addEventListener('click',()=>{
+                accordion_items[i].classList.toggle('active')
+            })
+        }
+       
+    </script>
+</body>
+</html>

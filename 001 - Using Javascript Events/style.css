@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ul{
+    list-style:none !important;
+    display: flex;
+    position: relative;
+}
+
+ul li{
+    background: linear-gradient(45deg, #cecece, #dedede);
+    padding: 10px 30px;
+    width:140px;
+    text-align: center;
+}
+
+ul li:hover{
+    background: #9e9e9e;
+   
+}
+
+#indicator{
+    background: #00ff55;
+    width: 140px;
+    height: 100%;
+    position: absolute;
+    filter: opacity(0.2);
+    left: 0px;
+    transition: 0.5s;
+
+}

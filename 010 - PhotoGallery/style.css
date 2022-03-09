@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #333;
+}
+
+.gallery-menu {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-search form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.gallery-search input {
+  font-size: 1.1rem;
+  height: 40px;
+  width: 500px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  letter-spacing: 0.5px;
+  color: #cecece;
+  background-color: #888;
+}
+
+.gallery-search button {
+  padding: 5px 20px;
+  height: 40px;
+  flex: 1;
+  background: #5da09a;
+  box-shadow:inset 2px 2px 2px #4d837e;
+  font-weight: bold;
+  border: none;
+}
+
+.gallery-search .icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#photo-detail {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  height: 95%;
+  border: 1px solid #cecece;
+  background-color: #fff;
+  z-index: 99999;
+  display: none;
+  flex-direction: row;
+}
+
+#photo-detail .comments {
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid #cecece;
+
+  flex: 3;
+}
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  background:#dcdcdc00;
+  width:30px;
+  height:30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic-detail {
+  flex: 6;
+}
+.pic {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border: 1px solid #cecece;
+  cursor: pointer;
+  filter: saturate(1);
+  transition: 0.3s;
+}
+.pic:hover {
+  filter: saturate(0);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 662px) {
+  .gallery-search input {
+   width:100%;
+ 
+  }
+
+  #photo-detail {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .close {
+    background:#dedede77;
+  }
+
+  #photo-detail .comments {
+    height: 100%;
+    background: #fff;
+    border-top: 2px solid #cecece;
+    border-left: none;
+    flex: 3;
+  }
+
+  .pic-detail {
+    max-height: 60%;
+  }
+}
